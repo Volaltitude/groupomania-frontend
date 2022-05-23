@@ -13,12 +13,12 @@ const Connexion = () => {
 				password,
 			});
 			localStorage.setItem("token", res.data.token);
-		} catch (err) {
-			console.error(err);
-		}
-    finally {
       window.location = "/home";
-    }
+
+		} catch (err) {
+			if (err.response.status === 401) console.log(err.response.data.error)
+      else console.log(err)
+		}
 	};
 
 	return (

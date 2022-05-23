@@ -9,6 +9,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Connexion />} />
         <Route path="/login" element={<Connexion />} />
         <Route path="/signup" element={<Inscription />} />
         <Route path='/home' element={<Home />} />

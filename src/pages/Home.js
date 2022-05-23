@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AddPost from '../components/AddPost';
 import Logo from '../components/Logo';
 import Post from '../components/Post';
 
 const Home = () => { 
+  const [posts, setPosts] = useState([]);
   return (
     <div className='contener'>
       <Logo />
-      <AddPost />
-      <Post />
+      <AddPost posts={posts} setPosts={setPosts}/>
+      <Post posts={posts} setPosts={setPosts}/>
     </div>
   );
 };

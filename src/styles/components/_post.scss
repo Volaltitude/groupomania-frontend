@@ -1,0 +1,23 @@
+.postsContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: solid 2px;
+	border-radius: 15px;
+	width: 700px;
+	li {
+		padding: 10px 0;
+    margin: 5px 25px;
+		}
+}
+
+.postContainer {
+  border: solid 2px $color-1;
+  border-radius: 10px;
+  padding: 15px;
+    button {
+      color: #FD360C
+    }
+
+}

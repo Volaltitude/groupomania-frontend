@@ -13,12 +13,10 @@ const Inscription = () => {
     try {
       if (password !== verifPassword) return <p>Le mot de passe ne correspond pas</p>
       await axios.post("http://localhost:3000/api/auth/signup", {lastname, firstname, email, password});
+      window.location= "/login";
     }
     catch (err) {
       console.error(err);
-    }
-    finally {
-      window.location= "/login";
     }
   }
 

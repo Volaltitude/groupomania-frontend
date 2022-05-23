@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const AddPost = () => {
+const AddPost = ({posts, setPosts}) => {
 
 const [message, setMessage] = useState("");
 
@@ -18,9 +18,6 @@ const handleSubmit = async (e) => {
   }
   catch (err) {
     console.error(err)
-  }
-  finally {
-    window.location = "/home";
   }
 }
 	return (
